@@ -6,6 +6,7 @@ import Home from './components/home';
 import Posts from './components/posts';
 import Profile from './components/profiles';
 import PostItem from './components/post_item';
+import NotFound from './components/not_found';
 
 const App = () => {
   return (
@@ -24,7 +25,8 @@ const App = () => {
           <Route path="/posts" component={Posts} />
           <Route path="/profile" component={Profile} />
           <Route path="/" exact component={Home} />
-          <Route render={() => <h3>Opps!! 404</h3>} />
+          {/* <Route render={() => <h3>Opps!! 404</h3>} /> */}
+          <Route component={NotFound} />
         </Switch>  
       </div>  
     </BrowserRouter>
