@@ -2,7 +2,6 @@ import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
 
 const Profile = (props) => {
-  console.log(props);
 
   const redirect = () => {
     // return <Redirect to="/" />

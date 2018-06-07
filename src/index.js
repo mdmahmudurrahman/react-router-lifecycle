@@ -6,6 +6,7 @@ import Home from './components/home';
 import Posts from './components/posts';
 import Profile from './components/profiles';
 import PostItem from './components/post_item';
+import Life from './components/lifecycles';
 import NotFound from './components/not_found';
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
           <Link to={{
             pathname: '/profile'
           }}>Profile</Link><br/>
+          <Link to="/life">Component life cycles</Link><br/>
           <hr/>
         </header>
         <Switch>
@@ -25,6 +27,7 @@ const App = () => {
           <Route path="/posts" component={Posts} />
           <Route path="/profile" component={Profile} />
           <Route path="/" exact component={Home} />
+          <Route path="/life" component={Life} />
           {/* <Route render={() => <h3>Opps!! 404</h3>} /> */}
           <Route component={NotFound} />
         </Switch>  
