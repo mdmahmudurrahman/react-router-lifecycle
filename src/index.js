@@ -8,6 +8,7 @@ import Profile from './components/profiles';
 import PostItem from './components/post_item';
 import Life from './components/lifecycles';
 import NotFound from './components/not_found';
+import Conditional from './components/conditional';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
             pathname: '/profile'
           }}>Profile</Link><br/>
           <Link to="/life">Component life cycles</Link><br/>
+          <Link to="/conditional">Conditional rendering</Link>
           <hr/>
         </header>
         <Switch>
@@ -28,6 +30,7 @@ const App = () => {
           <Route path="/profile" component={Profile} />
           <Route path="/" exact component={Home} />
           <Route path="/life" component={Life} />
+          <Route path="/conditional" component={Conditional} />
           {/* <Route render={() => <h3>Opps!! 404</h3>} /> */}
           <Route component={NotFound} />
         </Switch>  
